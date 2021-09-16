@@ -1,0 +1,100 @@
+@font-face {
+   font-family: 'Airfool';
+   src: url("../fonts/airfool.woff2") format('woff2'),
+   url("../fonts/airfool.ttf") format('ttf'),
+   url("../fonts/airfool.otf") format('otf');
+}
+body {
+   background-color: rgb(240, 240, 240);
+   margin: 0;
+   font-size: 16px;
+}
+p {
+   margin: 0;
+}
+a {
+   text-decoration: none;
+}
+.container {
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 0px 10px;
+   display: flex;
+}
+header {    
+   background: url('../images/header_background.jpg') repeat-x left top; 
+}
+.header {
+   display: flex;
+   align-items: center;
+}
+.logo {
+   display: flex; /*'этим заодно убрали отступ под img и <a>. У элементов с inline-block, в т.ч. img, по умолчанию снизу идёт отступ как у строки текста, который не убрать margin and padding. Нужно картинку превратить из текста в блок, например display: flex; или block; или родителю задать font-size: 0' */
+   align-items: center;
+}
+.logo-image {
+   margin-right: -3px;
+   transform: translate(-6px, 0px);
+}        
+.logo-text {
+   font-family: Airfool, sans-serif;
+   color: #d9e8f3;
+   font-size: 38px; 
+   margin: 0;
+   /*line-height: 60px; так выровнял текст лого по высоте. А теперь передумал и написал родителю align-items:center*/
+}
+.search {
+   margin-left: 19px;
+}
+.search input {
+   height: 18px;
+   border-radius: 5px;
+   border-style: none;
+   background-color: rgb(240, 240, 240);
+}
+
+
+/*left*/
+.left {
+   width: 25%;
+   min-width: 130px; /*потом поправить*/
+   margin-top: 10px;
+   /*border-style: solid;
+   border-color: rgb(145, 97, 97);
+   border-width: 1px; */
+}
+.left ul{
+   margin-top: 10px;
+   font-family: Calibri, Arial, Sans-serif;
+   line-height: 30px;
+   padding-left: 10px; /*этим я сдвигаю не только li, но и фоновые изображения li*/
+}
+.left ul li{
+   list-style-type: none;
+   padding-left: 32px;
+}
+   /*классы для элементов списка левого блока: */
+.my{ 
+   background: url('../images/li_left/my_page.png') no-repeat 0px 3px;
+}
+.ar{ 
+   background: url('../images/li_left/my_page.png') no-repeat 0px 3px;
+}
+
+/*main*/
+.main {
+   margin: 10px;
+   background: #fff;
+   padding: 15px 10px 0px 10px;
+
+}
+
+/*right*/
+.right{
+   width: 30%;
+   min-width: 120px; /*потом поправить*/
+   background: #fff;
+   margin-top: 10px;
+}
