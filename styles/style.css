@@ -18,11 +18,13 @@ a {
 .container {
    box-sizing: border-box;
    width: 100%;
-   max-width: 1300px;
+   max-width: 1100px;
    margin: 0 auto;
    padding: 0px 10px;
    display: flex;
+   align-items: flex-start;
 }
+/*HEADER___________________________*/
 header {    
    background: url('../images/header_background.jpg') repeat-x left top; 
 }
@@ -31,7 +33,7 @@ header {
    align-items: center;
 }
 .logo {
-   display: flex; /*'этим заодно убрали отступ под img и <a>. У элементов с inline-block, в т.ч. img, по умолчанию снизу идёт отступ как у строки текста, который не убрать margin and padding. Нужно картинку превратить из текста в блок, например display: flex; или block; или родителю задать font-size: 0' */
+   display: flex; /*'этим заодно убрал отступ под img и <a>*/
    align-items: center;
 }
 .logo-image {
@@ -43,58 +45,118 @@ header {
    color: #d9e8f3;
    font-size: 38px; 
    margin: 0;
-   /*line-height: 60px; так выровнял текст лого по высоте. А теперь передумал и написал родителю align-items:center*/
+   /*line-height: 60px; так выровнял текст лого по высоте. 
+   Потом передумал и написал родителю align-items:center*/
 }
 .search {
    margin-left: 19px;
 }
-.search input {
+.search__input {
    height: 18px;
    border-radius: 5px;
    border-style: none;
    background-color: rgb(240, 240, 240);
 }
 
-
-/*left*/
-.left {
+/*1) LEFT-SECTION_________________________________________*/
+.left-section {
    width: 25%;
-   min-width: 130px; /*потом поправить*/
-   margin-top: 10px;
+   min-width: 132px;
+   margin-top: 14px;
    /*border-style: solid;
    border-color: rgb(145, 97, 97);
    border-width: 1px; */
 }
-.left ul{
-   margin-top: 10px;
+.left-section__ul{
+   margin-top: 0;
    font-family: Calibri, Arial, Sans-serif;
-   line-height: 30px;
-   padding-left: 10px; /*этим я сдвигаю не только li, но и фоновые изображения li*/
+   line-height: 35px;
+   padding-left: 2px;
 }
-.left ul li{
+.left-section__li{
    list-style-type: none;
-   padding-left: 32px;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+}
+.left-section__li:before{ /*центрирeю иконки по высоте элемента строки li в динамике, напр. при изменении line-height*/
+   content: "";
+   background-size: 24px 24px;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 24px;
+   height: 24px;
+   margin-right: 10px;
+   margin-left: 10px;
+}
+.left-section__li:hover{
+   background-color: rgb(223, 223, 223); 
 }
    /*классы для элементов списка левого блока: */
-.my{ 
-   background: url('../images/li_left/my_page.png') no-repeat 0px 3px;
+.left-section__li-1:before{ 
+   background-image: url('../images/li_left/my_page.png'); 
 }
-.ar{ 
-   background: url('../images/li_left/my_page.png') no-repeat 0px 3px;
+.left-section__li-2:before{ 
+   background-image: url('../images/li_left/article.png'); 
+}
+.left-section__li-3:before{ 
+   background-image: url('../images/li_left/messanges.png'); 
+}
+.left-section__li-4:before{ 
+   background-image: url('../images/li_left/friends.png'); 
+}
+.left-section__li-5:before{ 
+   background-image: url('../images/li_left/subscriptions.png'); 
+}
+.left-section__li-6:before{ 
+   background-image: url('../images/li_left/photos.png'); 
 }
 
-/*main*/
+/*2) MAIN______________________________________________*/
 .main {
-   margin: 10px;
+   margin: 14px;
+   margin-bottom: 0;
    background: #fff;
-   padding: 15px 10px 0px 10px;
-
+   padding: 15px 15px 0px 15px;
+   box-sizing: border-box;
+   height: calc(100vh - 60px - 14px); /*Растянул блок до нижней гнаницы окна*/
+   border-radius: 5px;
 }
 
-/*right*/
-.right{
+/*3) RIGHT-SECTION______________________________________*/
+.right-section{
    width: 30%;
-   min-width: 120px; /*потом поправить*/
+   min-width: 120px;
    background: #fff;
-   margin-top: 10px;
+   margin-top: 14px;
+   border-radius: 5px;
+}
+.right-section__ul{
+   margin-top: 5px;
+   margin-bottom: 5px;
+   list-style-type: none;
+   line-height: 35px;
+   font-family: Calibri, Arial, Sans-serif;
+   color:#27709B;
+   padding-left: 0px;
+}
+.right-section__li:hover{
+   background-color: rgb(236, 236, 236);
+}
+.right-section__li{
+   padding-left: 17px;
+   display: flex;
+   position: relative;
+}
+.right-section__li1{
+   background-color: rgb(236, 236, 236);
+}
+.right-section__li1:before{
+   content: "";
+   display: block;
+   width:2px;
+   height: 35px;
+   background-color: #27709B;
+   position: absolute;
+   left:0;
 }
