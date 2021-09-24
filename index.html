@@ -6,44 +6,45 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Kitty</title>
    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.png">
-   <link type="text/css" rel="stylesheet" href="styles/style.css">
+   <link type="text/css" rel="stylesheet" href="styles/styles.css">
    <link type="text/css" rel="stylesheet" href="styles/media.css">
    </head>
 
 <body>
    <header>
-      <div class="container header">
-         <a class="logo" href="index.html" titile="Home page"> 
-            <img class="logo-image" src="images/logo.png" width="80" height="60" alt="Logo KITTY">
-            <span class="logo-text">KITTY</span> 
-         </a> 
-         <form  class="search" action="#" method="POST"> <!--Нужно указать адрес для сценария формы-->
-            <input class="search__input" type="text" name="search" placeholder="Search">
-         </form>
-
+      <div class="container">
+         <div class="header__inner">
+            <a class="logo" href="index.html" titile="Home page"> 
+               <img class="logo-image" src="images/logo.png" width="80" height="60" alt="Logo KITTY">
+               <span class="logo-text">Kitty</span> 
+            </a> 
+            <form  class="search" action="#" method="POST"> <!--Нужно указать адрес для сценария формы-->
+               <input class="search__input" type="text" name="search" placeholder="Search">
+            </form>
+         </div>
       </div>
    </header>
 
    <div class="container">
       <section class="left-section">
          <nav>
-            <ul class="left-section__ul-1">
-               <li  class="left-section__li li-1">
+            <ul class="left-section__group-1">
+               <li  class="left-section__element li-1">
                   My page
                </li>
-               <li  class="left-section__li li-2">
+               <li  class="left-section__element li-2">
                   Article
                </li>
-               <li class="left-section__li li-3">
+               <li class="left-section__element li-3">
                   Messanes
                </li>
-               <li class="left-section__li li-4">
+               <li class="left-section__element li-4">
                   Friends
                </li>
-               <li class="left-section__li li-5">
+               <li class="left-section__element li-5">
                   Subscriptions
                </li>
-               <li class="left-section__li li-6">
+               <li class="left-section__element li-6">
                   Photos
                </li>
             </ul>
@@ -56,14 +57,14 @@
 
       <section class="right-section"> 
          <nav>
-            <ul class="right-section__ul-1">
-               <li class="right-section__li li1 active">
+            <ul class="right-section__group-1">
+               <li class="right-section__element li1 active">
                   My article
                </li>
-               <li class="right-section__li li2">
+               <li class="right-section__element li2">
                   Random
                </li>
-               <li class="right-section__li li3">
+               <li class="right-section__element li3">
                   Favorites
                </li>
             </ul>
