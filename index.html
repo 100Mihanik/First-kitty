@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitty</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.png" />
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <link type="text/css" rel="stylesheet" href="styles/media.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Kitty</title>
-	<link type="image/x-icon" rel="shortcut icon" href="images/favicon.png" />
-	<link type="text/css" rel="stylesheet" href="styles/styles.css" />
-	<link type="text/css" rel="stylesheet" href="styles/media.css" />
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <a class="header-inner__link" href="index.html" title="Home page">
+            <img
+              class="header-inner__logo"
+              src="images/logo.png"
+              width="80"
+              height="60"
+              alt="KITTY"
+            />
+            <h1 class="header-inner__title">Kitty</h1>
+          </a>
+          <form class="header-inner__search" action="#" method="POST">
+            <!--Нужно указать адрес для сценария формы-->
+            <input
+              class="header-inner__input"
+              type="text"
+              name="search"
+              placeholder="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
 
-<body>
-	<header>
-		<div class="container">
-			<div class="header-inner">
-				<a class="header-inner__link" href="index.html" title="Home page">
-					<img class="header-inner__logo" src="images/logo.png" width="80" height="60" alt="KITTY" />
-					<h1 class="header-inner__title">Kitty</h1>
-				</a>
-				<form class="header-inner__search" action="#" method="POST">
-					<!--Нужно указать адрес для сценария формы-->
-					<input class="header-inner__input" type="text" name="search" placeholder="Search" />
-				</form>
-			</div>
-		</div>
-	</header>
+    <div class="container">
+      <aside class="left-bar">
+        <nav>
+          <ul class="left-bar__items">
+            <li class="left-bar__item li-1">
+              <a href="#">My page</a>
+            </li>
+            <li class="left-bar__item li-2">
+              <a href="#">Articles</a>
+            </li>
+            <li class="left-bar__item li-3">
+              <a href="#">Messanes</a>
+            </li>
+            <li class="left-bar__item li-4">
+              <a href="#">Friends</a>
+            </li>
+            <li class="left-bar__item li-5">
+              <a href="#">Subscriptions</a>
+            </li>
+            <li class="left-bar__item li-6">
+              <a href="#">Photos</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-	<div class="container">
-		<aside class="left-bar">
-			<nav>
-				<ul class="left-bar__items">
-					<li class="left-bar__item li-1">
-						<a href="#">My page</a>
-					</li>
-					<li class="left-bar__item li-2">
-						<a href="#">Articles</a>
-					</li>
-					<li class="left-bar__item li-3">
-						<a href="#">Messanes</a>
-					</li>
-					<li class="left-bar__item li-4">
-						<a href="#">Friends</a>
-					</li>
-					<li class="left-bar__item li-5">
-						<a href="#">Subscriptions</a>
-					</li>
-					<li class="left-bar__item li-6">
-						<a href="#">Photos</a>
-					</li>
-				</ul>
-			</nav>
-		</aside>
+      <section class="main">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
+          ex ut eligendi dicta incidunt doloribus ipsum ratione earum molestias
+          eum dolorum, dolorem reprehenderit aliquid possimus suscipit, sed et
+          hic totam?
+        </p>
+      </section>
 
-		<section class="main">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
-				ex ut eligendi dicta incidunt doloribus ipsum ratione earum molestias
-				eum dolorum, dolorem reprehenderit aliquid possimus suscipit, sed et
-				hic totam?
-			</p>
-		</section>
-
-		<aside class="right-bar">
-			<nav>
-				<ul class="right-bar__group-1">
-					<li class="right-bar__element right-bar__element--active">
-						My article
-					</li>
-					<li class="right-bar__element">Random</li>
-					<li class="right-bar__element">Favorites</li>
-				</ul>
-			</nav>
-		</aside>
-	</div>
-</body>
-
+      <aside class="right-bar">
+        <nav>
+          <ul class="right-bar__group-1">
+            <li class="right-bar__element right-bar__element--active">
+              My article
+            </li>
+            <li class="right-bar__element">Random</li>
+            <li class="right-bar__element">Favorites</li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </body>
 </html>
